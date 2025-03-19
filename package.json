@@ -1,11 +1,32 @@
 {
+  "type": "module",
+  "private": true,
   "name": "yahoo-messenger-emojis",
-  "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint 'packages/**/*.ts' 'packages/**/*.tsx' --fix",
+    "prepare": "husky"
   },
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "eslint": "^9.22.0",
+    "eslint-config-prettier": "^10.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "typescript": "^5.8.2"
+  },
+  "lint-staged": {
+    "packages/**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "prettier": "^3.5.3"
+  }
 }

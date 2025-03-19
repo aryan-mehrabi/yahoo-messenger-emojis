@@ -1,0 +1,13 @@
+# Node.js dependencies
+node_modules
+.yarn/
+.pnp.cjs
+.pnp.loader.mjs
+
+# TypeScript build output
+dist/
+*.tsbuildinfo
+
+# Logs & system files
+*.log
+.DS_Store
