@@ -3,6 +3,7 @@ import js from '@eslint/js';
 import ts from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import prettier from 'eslint-config-prettier';
+import globals from 'globals';
 
 export default [
   js.configs.recommended,
@@ -10,6 +11,9 @@ export default [
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {
       parser: tsParser,
+      globals: {
+        ...globals.node,
+      },
     },
     plugins: {
       '@typescript-eslint': ts,
@@ -21,12 +25,6 @@ export default [
   },
   {
     ignores: ['node_modules/', 'dist/'],
-  },
-  {
-    files: ['packages/react/**/*.{ts,tsx}'],
-    rules: {
-      'react/prop-types': 'off',
-    },
   },
   prettier,
 ];
