@@ -1,3 +1,7 @@
 import emoticons from "./emoticons.json";
 
-console.log(emoticons.emoticons.emoticon[0]);
+type EmojisName = emoticons["emoticons"]["emoticon"][number]["title"];
+
+export const getEmojiByName = (name: EmojisName) => {
+  return emoticons.emoticons.emoticon.find((emoji) => emoji.title === name);
+};
