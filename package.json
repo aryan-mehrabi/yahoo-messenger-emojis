@@ -25,7 +25,7 @@
     "packages/**/*.{ts,tsx,js,jsx}": [
       "eslint --fix",
       "prettier --write",
-      "tsc --noEmit"
+      "tsc --showConfig --noEmit"
     ]
   },
   "dependencies": {}
