@@ -1,14 +1,19 @@
 {
-  "name": "yahoo-messenger-emojis-core",
+  "name": "@yahoo-messenger-emojis/core",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "vite build",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "@types/node": "^22.15.21",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4"
   }
 }
