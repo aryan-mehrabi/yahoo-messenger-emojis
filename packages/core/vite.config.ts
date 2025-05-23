@@ -2,6 +2,7 @@ import fs from "fs";
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 function generateEntryPoints() {
   const indexFilePath = "./src/index.ts";
@@ -38,5 +39,15 @@ export default defineConfig({
     sourcemap: true,
     emptyOutDir: true,
   },
-  plugins: [dts({ rollupTypes: true, copyDtsFiles: true })],
+  plugins: [
+    dts({ rollupTypes: true, copyDtsFiles: true }),
+    viteStaticCopy({
+      targets: [
+        {
+          src: "./src/assests/*",
+          dest: "./emojies",
+        },
+      ],
+    }),
+  ],
 });

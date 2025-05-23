@@ -10,7 +10,8 @@
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "vite-plugin-static-copy": "^3.0.0"
   },
   "dependencies": {
     "@types/node": "^22.15.21",
