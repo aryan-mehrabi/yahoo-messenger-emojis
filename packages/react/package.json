@@ -7,20 +7,21 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsc",
+    "dev": "vite",
     "type-check": "tsc --noEmit"
   },
-  "devDependencies": {},
-  "peerDependencies": {
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
-  },
-  "dependencies": {
+  "devDependencies": {
     "@types/react": "^19.1.5",
     "@types/react-dom": "^19.1.5",
     "@vitejs/plugin-react-swc": "^3.9.0",
-    "@yahoo-messenger-emojis/core": "^1.0.0",
     "vite": "^6.2.2",
     "vite-plugin-dts": "^4.5.4",
-    "vite-plugin-lib-inject-css": "^2.2.2"
+    "vite-plugin-lib-inject-css": "^2.2.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@yahoo-messenger-emojis/core": "^1.0.0"
   }
 }

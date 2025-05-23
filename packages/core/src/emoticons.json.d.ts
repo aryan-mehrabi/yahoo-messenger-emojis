@@ -399,7 +399,4 @@ type Emoticons = [
   { title: "fight"; id: "141"; shortcuts: { shortcut: ":(fight)" } },
 ];
 
-// eslint-disable-next-line no-redeclare
-declare const Emoticons: Emoticons;
-
-export = Emoticons;
+export default Emoticons;
