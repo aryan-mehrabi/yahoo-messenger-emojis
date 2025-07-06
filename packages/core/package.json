@@ -5,6 +5,10 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "files": [
+    "emojies",
+    "index.es.js"
+  ],
   "scripts": {
     "build": "vite build",
     "type-check": "tsc --noEmit"

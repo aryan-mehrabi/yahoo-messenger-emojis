@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint 'packages/**/*.ts' 'packages/**/*.tsx' --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "core:build": "cd ./packages/core && yarn build",
+    "react:dev": "cd ./packages/react && yarn run dev"
   },
   "workspaces": [
     "packages/*"

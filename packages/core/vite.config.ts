@@ -44,8 +44,8 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: "./src/assests/*",
-          dest: "./emojies",
+          src: "./src/emojis/*",
+          dest: "./emojis",
         },
       ],
     }),
